@@ -1,0 +1,103 @@
+% !TEX TS-program = xelatex
+% Command for running this example (needs latexmkrc file):
+%    latexmk -bibtex -pdf main.tex
+
+% این قالب با استفاده از کلاس kntu-thesis جهت نگارش گزارش پروژه، پایان‌نامه و رساله توسط محمدسینا اله‌کرم آماده سازی شده و از طریق لینک زیر در دسترس علاقه‌مندان قرار گرفته است.
+%	https://github.com/msinamsina/kntu-thesis
+
+%----------------------------------------------------------------------------------------------
+% اگر قصد نوشتن پروژه کارشناسی را دارید، در خط زیر به جای msc، کلمه bsc و اگر قصد نوشتن رساله دکترا را دارید، کلمه phd را قرار دهید. کلیه تنظیمات لازم، به طور خودکار، اعمال می‌شود.
+
+% اگر مایلید پایان‌نامه شما دورو باشد به جای oneside در خط زیر از twoside استفاده کنید.
+
+% برای حاشیه‌نویسی و کم کردن صفحات ابتدایی، گزینه draft را وارد و برای نسخه نهایی آن را حذف کنید.
+
+% برای استفاده از قلم‌های سری IR Series گزینه irfonts را وارد و برای استفاده از قلم‌های X Series 2 آن را حذف کنید.
+
+\documentclass[
+twoside
+% ,openany
+,msc
+,irfonts
+% ,draft
+]{./kntu-thesis}
+
+% فایل commands.tex را مطالعه کنید؛ چون دستورات مربوط به فراخوانی بسته‌ها، فونت و دستورات خاص در این فایل قرار دارد.
+\input{./tex/commands}
+
+% مشخصات پایان‌نامه را در فایلهای faTitle و enTitle وارد نمایید.
+\input{./tex/faTitle}
+% مشخصات انگلیسی پایان‌نامه
+\input{./tex/enTitle}
+
+% تنظیمات و تعاریف واژه‌نامه و اختصارات
+\input{./tex/glossaries-settings}
+\input{./tex/words}
+\input{./tex/acronyms.tex}
+
+\begin{document}
+
+\pagenumbering{adadi} % یک، دو، ...
+\input{./tex/thesis_preamble}
+
+\pagestyle{fancy}
+\pagenumbering{arabic} % 1, 2, ...
+
+\include{./tex/chapter1}		% فصل اول: مقدمه
+\include{./tex/chapter2}		% فصول دوم: مروری بر مطالعات انجام شده
+\include{./tex/chapter3}		% فصل سوم: معرفی معماری POLO
+\include{./tex/chapter4}		% فصل چهارم: نتایج
+\include{./tex/chapter5}		% فصل پنجم: بحث و نتیجه‌گیری
+
+% مراجع
+% اگر از استیل‌های natbib استفاده می‌کنید باید دو خط را در فایل commands.tex تغییر دهید.
+\pagestyle{empty}
+{
+\small
+\onehalfspacing
+\bibliographystyle{unsrt-fa} % or plainnat-fa for author-date
+\bibliography{./tex/MyReferences}
+}
+
+\pagestyle{fancy}
+
+\appendix
+% فصلهای پس از این قسمت به عنوان ضمیمه خواهند آمد.
+
+% دستورات لازم برای تبدیل «فصل آ» به «پیوست آ» در فهرست مطالب
+\addtocontents{toc}{
+\protect\renewcommand\protect\cftchappresnum{\appendixname~}%
+\protect\setlength{\cftchapnumwidth}{\mylenapp}}
+    
+% دستورات لازم برای شماره‌گذاری صفحات پیوست‌ها بشکل آ-۱ (فعلا با glossaries سازگار نیست)
+%\let\Chapter\chapter
+%\pretocmd{\chapter}{
+%\clearpage
+%\pagenumbering{arabic}
+%\renewcommand*{\thepage}{\rl{\thechapter-\arabic{page}}}}{}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
+
+\include{./tex/appendix1}		% پیوست اول: آشنایی مقدماتی با لاتک
+\include{./tex/appendix2}		% پیوست دوم: جدول، نمودار و الگوریتم در لاتک
+\include{./tex/appendix3}   	% پیوست سوم: مراجع، واژه‌نامه و حاشیه‌نویسی
+
+\onehalfspacing
+\cleardoublepage
+% برگرداندن شماره‌بندی صفحات فصول
+\let\chapter\Chapter
+\pagenumbering{tartibi} % اول، دوم، ...
+\baselineskip=.75cm
+
+% چاپ واژه‌نامه‌ها و نمایه
+\printglossary
+\cleardoublepage
+\printindex
+
+\begin{latin}
+\baselineskip=.6cm
+\latinabstract
+\latinTitlePage
+\end{latin}
+\label{LastPage}
+
+\end{document}

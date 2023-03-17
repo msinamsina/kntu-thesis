@@ -112,9 +112,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		\centerline{\textcolor[rgb]{0,0,0.5}{\nast \bfseries\@faculty - \@department}}
 		% بعد از آرم‌ها
 		\centering
-		\vskip 1.5cm
-		{\huge\titlefont\bfseries \@title}\par
-		\vskip 5mm
+		\vskip 0.5cm
 		\if@bscthesis 
 		{\large\bfseries{پروژهٔ کارشناسی \@subject}
 			\ifx\@field\undefined%
@@ -128,6 +126,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		{\large\bfseries \@projectLabel{} \writtenfor
 			\@degree{} 
 		}
+	
 		{\large\bfseries{در رشتهٔ \@subject}}
 		\vskip .2cm
 		\centerline{\large \bfseries%
@@ -138,6 +137,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 			\fi
 		}
 		\fi	
+		{\huge\titlefont\bf \@title}\par
 		\vskip 1cm
 		\par
 		{\Large\bfseries{\@name\ \ \@surname}}
@@ -205,9 +205,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		\centerline{\textcolor[rgb]{0,0,0.5}{\nast \bfseries\@faculty - \@department}}
 		% بعد از آرم‌ها
 		\centering
-		\vskip 1.5cm
-		{\huge\titlefont\bfseries \@title}\par
-		\vskip 5mm
+		\vskip 0.5cm
 		\if@bscthesis 
 		{\large\bfseries{پروژهٔ کارشناسی \@subject}
 			\ifx\@field\undefined%
@@ -220,6 +218,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		{\large\bfseries \@projectLabel{} \writtenfor
 			\@degree{} 
 		}
+	
 		{\large\bfseries{در رشتهٔ \@subject}}
 		\vskip .2cm
 		\centerline{\large \bfseries%
@@ -230,8 +229,11 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		\fi
 		}
 		\fi	
+		{\huge عنوان}\par
+		{\huge\titlefont\bf \@title}\par
 		\vskip 1cm
 		\par
+		{\Large نگارش}\par
 		{\Large\bfseries{\@name\ \ \@surname}}
 		\par
 		\vskip 15mm
@@ -292,7 +294,8 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% تاییدیه هیات داوران
 \newcommand{\davaranPage}{
-	\cleardoublepage
+%	\cleardoublepage
+    \clearpage
 	%\setcounter{page}{1}
 	\thispagestyle{empty}
 	\centerline{{\includegraphics[width=3cm]{IDMJ.pdf}}}		
@@ -379,7 +382,8 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% تأییدیه‌ی صحت و اصالت نتایج
 \newcommand{\esalatPage}{
-	\cleardoublepage
+%	\cleardoublepage
+    \clearpage
 	\thispagestyle{empty}
 	\begin{center}
 		\includegraphics[width=3cm]{IDMJ.pdf}\\
@@ -416,7 +420,8 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 %% مجوز بهره‌برداری از پایان‌نامه
 \newcommand{\mojavezPage}
 {
-	\cleardoublepage
+%	\cleardoublepage
+    \clearpage
 	\thispagestyle{empty}
 	\begin{center}
 		\includegraphics[width=3cm]{IDMJ.pdf}\\

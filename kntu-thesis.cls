@@ -314,7 +314,9 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 	\@degree{}
 	در رشته‌ی 
 	\@subject{}
-	در تاریخ ............ مورد تأیید قرار دادند.\\
+	در تاریخ 
+	\@thesisdate
+	مورد تأیید قرار دادند.\\
 	\ifx\@secondadvisor\undefined%
 	\else\vspace{-1cm}
 	\fi

@@ -126,7 +126,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		{\large\bfseries \@projectLabel{} \writtenfor
 			\@degree{} 
 		}
-	
+		
 		{\large\bfseries{در رشتهٔ \@subject}}
 		\vskip .2cm
 		\centerline{\large \bfseries%
@@ -161,21 +161,21 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 			{\Large\bfseries \@firstsupervisor{} و \@secondsupervisor}
 			\fi\fi}
 		\par\large
-%		{\ifx\@firstadvisor\undefined%
-%			\ifx\@secondadvisor\undefined%
-%			\else\fi
-%			\else
-%			\ifx\@secondadvisor\undefined%
-%			استاد مشاور
-%			{\Large\bfseries\par
-%				\@firstadvisor}
-%			\else
-%			
-%			\large
-%			اساتید مشاور
-%			\par
-%			{\Large\bfseries\@firstadvisor{} و \@secondadvisor}
-%			\fi\fi}
+		%		{\ifx\@firstadvisor\undefined%
+		%			\ifx\@secondadvisor\undefined%
+		%			\else\fi
+		%			\else
+		%			\ifx\@secondadvisor\undefined%
+		%			استاد مشاور
+		%			{\Large\bfseries\par
+		%				\@firstadvisor}
+		%			\else
+		%			
+		%			\large
+		%			اساتید مشاور
+		%			\par
+		%			{\Large\bfseries\@firstadvisor{} و \@secondadvisor}
+		%			\fi\fi}
 		
 		\par
 		\vskip 6mm
@@ -218,15 +218,15 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		{\large\bfseries \@projectLabel{} \writtenfor
 			\@degree{} 
 		}
-	
+		
 		{\large\bfseries{در رشتهٔ \@subject}}
 		\vskip .2cm
 		\centerline{\large \bfseries%
-		\ifx\@field\undefined%
-		\relax
-		\else
+			\ifx\@field\undefined%
+			\relax
+			\else
 			گرایش \@field
-		\fi
+			\fi
 		}
 		\fi	
 		{\huge عنوان}\par
@@ -294,8 +294,8 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% تاییدیه هیات داوران
 \newcommand{\davaranPage}{
-%	\cleardoublepage
-    \clearpage
+	%	\cleardoublepage
+	\clearpage
 	%\setcounter{page}{1}
 	\thispagestyle{empty}
 	\centerline{{\includegraphics[width=3cm]{IDMJ.pdf}}}		
@@ -308,82 +308,82 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		}
 	\end{center}
 	%\vspace{.5cm}
-هیأت داوران پس از مطالعه‌ی \@projectLabel{}ٔ  و شرکت در جلسه‌ی دفاع از پایان‌نامه‌ٔ تهیه‌شده با عنوان 
-«\@title{}»
-توسط  آقای~/~خانم \@name{} \@surname{} صحت و کفایت تحقیق انجام شده را برای اخذ درجه‌ی
-\@degree{}
-در رشته‌ی 
-\@subject{}
-در تاریخ ............ مورد تأیید قرار دادند.\\
-\ifx\@secondadvisor\undefined%
-\else\vspace{-1cm}
-\fi
-\newcounter{davaranCounter}
-\begin{enumerate}
-				\ifx\@firstsupervisor\undefined
-				\else \item
-استاد راهنما: 
-					 \@firstsupervisor
-%					 \@firstsupervisorrank 
-%دانشگاه خواجه نصیرالدین طوسی 
-					 \dotfill امضا\\
-				\fi
-				\ifx\@secondsupervisor\undefined%
-				\else \item
-استاد راهنما: 
-					 \@secondsupervisor 
-%					 \@secondsupervisorrank 
-%دانشگاه خواجه نصیرالدین طوسی 
-					   \dotfill امضا\\ 
-				\fi
-				\ifx\@firstadvisor\undefined%
-				\else \item
-استاد مشاور: 
-				  \@firstadvisor 
-%				   \@firstadvisorrank 
-%دانشگاه خواجه نصیرالدین طوسی
-				  \dotfill امضا\\
-				\fi
-				\ifx\@secondadvisor\undefined%
-				\else \item
-استاد مشاور: 
-				  \@secondadvisor 
-%				  \@secondadvisorrank 
-%دانشگاه خواجه نصیرالدین طوسی 
-				   \dotfill امضا\\
-				\fi
-				
-				\ifx\@internaljudge\undefined%
-				\else \item
-استاد داور داخلی: 
- 				\@internaljudge 
-% 				\@internaljudgerank 
-%دانشگاه خواجه نصیرالدین طوسی 
-    			\dotfill امضا\\
-				\fi
-				\ifx\@externaljudge\undefined%
-				\else \item
-استاد مدعو: 
-				\@externaljudge 
-%				\@externaljudgerank 
-%				\@externaljudgeuniversity
-				\dotfill امضا \\
-				\fi
-				\ifx\@graduatedeputy\undefined%
-				\else \item
-نمایندهٔ تحصیلات تکمیلی دانشکده: 
-				 \@graduatedeputy 
-%				 \@graduatedeputyrank 
-%دانشگاه خواجه نصیرالدین طوسی 
-				 \dotfill امضا \\
-				\fi
-\end{enumerate}
+	هیأت داوران پس از مطالعه‌ی \@projectLabel{}ٔ  و شرکت در جلسه‌ی دفاع از پایان‌نامه‌ٔ تهیه‌شده با عنوان 
+	«\@title{}»
+	توسط  آقای~/~خانم \@name{} \@surname{} صحت و کفایت تحقیق انجام شده را برای اخذ درجه‌ی
+	\@degree{}
+	در رشته‌ی 
+	\@subject{}
+	در تاریخ ............ مورد تأیید قرار دادند.\\
+	\ifx\@secondadvisor\undefined%
+	\else\vspace{-1cm}
+	\fi
+	\newcounter{davaranCounter}
+	\begin{enumerate}
+		\ifx\@firstsupervisor\undefined
+		\else \item
+		استاد راهنما: 
+		\@firstsupervisor
+		%					 \@firstsupervisorrank 
+		%دانشگاه خواجه نصیرالدین طوسی 
+		\dotfill امضا\\
+		\fi
+		\ifx\@secondsupervisor\undefined%
+		\else \item
+		استاد راهنما: 
+		\@secondsupervisor 
+		%					 \@secondsupervisorrank 
+		%دانشگاه خواجه نصیرالدین طوسی 
+		\dotfill امضا\\ 
+		\fi
+		\ifx\@firstadvisor\undefined%
+		\else \item
+		استاد مشاور: 
+		\@firstadvisor 
+		%				   \@firstadvisorrank 
+		%دانشگاه خواجه نصیرالدین طوسی
+		\dotfill امضا\\
+		\fi
+		\ifx\@secondadvisor\undefined%
+		\else \item
+		استاد مشاور: 
+		\@secondadvisor 
+		%				  \@secondadvisorrank 
+		%دانشگاه خواجه نصیرالدین طوسی 
+		\dotfill امضا\\
+		\fi
+		
+		\ifx\@internaljudge\undefined%
+		\else \item
+		استاد داور داخلی: 
+		\@internaljudge 
+		% 				\@internaljudgerank 
+		%دانشگاه خواجه نصیرالدین طوسی 
+		\dotfill امضا\\
+		\fi
+		\ifx\@externaljudge\undefined%
+		\else \item
+		استاد مدعو: 
+		\@externaljudge 
+		%				\@externaljudgerank 
+		%				\@externaljudgeuniversity
+		\dotfill امضا \\
+		\fi
+		\ifx\@graduatedeputy\undefined%
+		\else \item
+		نمایندهٔ تحصیلات تکمیلی دانشکده: 
+		\@graduatedeputy 
+		%				 \@graduatedeputyrank 
+		%دانشگاه خواجه نصیرالدین طوسی 
+		\dotfill امضا \\
+		\fi
+	\end{enumerate}
 } % End of davaranPage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% تأییدیه‌ی صحت و اصالت نتایج
 \newcommand{\esalatPage}{
-%	\cleardoublepage
-    \clearpage
+	%	\cleardoublepage
+	\clearpage
 	\thispagestyle{empty}
 	\begin{center}
 		\includegraphics[width=3cm]{IDMJ.pdf}\\
@@ -402,12 +402,12 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 	\@subject{}
 	دانشکده 
 	\@college{}
-دانشگاه‌خواجه نصیرالدین طوسی گواهی می‌نمایم که تحقیقات ارائه شده در این پایان‌نامه با عنوان:
-\begin{center}
-	\textbf{{\@title{}}}
-\end{center}
-توسط اینجانب انجام و بدون هرگونه دخل و تصرف است و موارد نسخه برداری شده از آثار دیگران
-را با ذکر کامل مشخصات منبع ذکر کرده ام. در صورت اثبات خلاف مندرجات فوق، به تشخیص دانشگاه مطابق با ضوابط و مقررات حاکم (قانون حمایت از حقوق مؤلفان و مصنفان و قانون ترجمه و تکثیر کتب و نشریات و آثار صوتی، ضوابط و مقررات آموزشی، پژوهشی و انضباطی و غیره) با اینجانب رفتار خواهد شد. در ضمن، مسئولیت هرگونه پاسخگویی به اشخاص اعم از حقیقی و حقوقی و مراجع ذی صلاح (اعم از اداری و قضایی) به عهده ی اینجانب خواهد بود و دانشگاه هیچ گونه مسئولیتی در این خصوص نخواهد داشت.	
+	دانشگاه‌خواجه نصیرالدین طوسی گواهی می‌نمایم که تحقیقات ارائه شده در این پایان‌نامه با عنوان:
+	\begin{center}
+		\textbf{{\@title{}}}
+	\end{center}
+	توسط اینجانب انجام و بدون هرگونه دخل و تصرف است و موارد نسخه برداری شده از آثار دیگران
+	را با ذکر کامل مشخصات منبع ذکر کرده ام. در صورت اثبات خلاف مندرجات فوق، به تشخیص دانشگاه مطابق با ضوابط و مقررات حاکم (قانون حمایت از حقوق مؤلفان و مصنفان و قانون ترجمه و تکثیر کتب و نشریات و آثار صوتی، ضوابط و مقررات آموزشی، پژوهشی و انضباطی و غیره) با اینجانب رفتار خواهد شد. در ضمن، مسئولیت هرگونه پاسخگویی به اشخاص اعم از حقیقی و حقوقی و مراجع ذی صلاح (اعم از اداری و قضایی) به عهده ی اینجانب خواهد بود و دانشگاه هیچ گونه مسئولیتی در این خصوص نخواهد داشت.	
 	\vspace{1cm}
 	\begin{center}
 		\begin{tabular}{lr}
@@ -420,76 +420,76 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 %% مجوز بهره‌برداری از پایان‌نامه
 \newcommand{\mojavezPage}
 {
-%	\cleardoublepage
-    \clearpage
+	%	\cleardoublepage
+	\clearpage
 	\thispagestyle{empty}
 	\begin{center}
 		\includegraphics[width=3cm]{IDMJ.pdf}\\
 		\textbf{{ \Large  }\\[0.2cm]}
 		\textbf{{ \Large حق طبع، نشر و مالکیت نتایج}\\[1cm]}
 	\end{center}
-حق چاپ و تکثیر این پایان نامه متعلق به نویسندگان آن می باشد. بهره برداری از این پایان نامه
-در چهارچوب مقررات کتابخانه و با توجه به محدودیتی که توسط استاد راهنما به شرح زیر تعیین
-می گردد، بلامانع است:\\
-\begin{itemize}
-	\item[$\square$]
-	 بهره‌برداری از این 
-	 \@projectLabel ‌
-	  برای همگان و با ذکر منبع، بلامانع است.
-	\item[$\square$]
-	 بهره‌برداری از این
-	  \@projectLabel‌
-	   با اخذ مجوز از استاد راهنما و با ذکر منبع، بلامانع است.
-	\item[$\square$]
-	 بهره‌برداری از این 
-	 \@projectLabel‌
-	  تا تاریخ \rule{2cm}{0.02cm} ممنوع است. 
-\end{itemize}
-\ifx\@firstsupervisor\undefined%
-\else 
-استاد راهنما: 
-\@firstsupervisor
-%					 \@firstsupervisorrank 
-%دانشگاه خواجه نصیرالدین طوسی 
-\dotfill امضا\\
-\vspace{5mm}
-\fi
-\ifx\@secondsupervisor\undefined%
-\else 
-استاد راهنما: 
-\@secondsupervisor 
-%					 \@secondsupervisorrank 
-%دانشگاه خواجه نصیرالدین طوسی 
-\dotfill امضا\\
-\vspace{5mm}
-\fi
-\ifx\@firstadvisor\undefined%
-\else 
-استاد مشاور: 
-\@firstadvisor 
-%				   \@firstadvisorrank 
-%دانشگاه خواجه نصیرالدین طوسی
-\dotfill امضا\\
-\vspace{5mm}
-\fi
-\ifx\@secondadvisor\undefined%
-\else 
-استاد مشاور: 
-\@secondadvisor 
-%				  \@secondadvisorrank 
-%دانشگاه خواجه نصیرالدین طوسی 
-\dotfill امضا\\
-\vspace{5mm}
-\fi
+	حق چاپ و تکثیر این پایان نامه متعلق به نویسندگان آن می باشد. بهره برداری از این پایان نامه
+	در چهارچوب مقررات کتابخانه و با توجه به محدودیتی که توسط استاد راهنما به شرح زیر تعیین
+	می گردد، بلامانع است:\\
+	\begin{itemize}
+		\item[$\square$]
+		بهره‌برداری از این 
+		\@projectLabel ‌
+		برای همگان و با ذکر منبع، بلامانع است.
+		\item[$\square$]
+		بهره‌برداری از این
+		\@projectLabel‌
+		با اخذ مجوز از استاد راهنما و با ذکر منبع، بلامانع است.
+		\item[$\square$]
+		بهره‌برداری از این 
+		\@projectLabel‌
+		تا تاریخ \rule{2cm}{0.02cm} ممنوع است. 
+	\end{itemize}
+	\ifx\@firstsupervisor\undefined%
+	\else 
+	استاد راهنما: 
+	\@firstsupervisor
+	%					 \@firstsupervisorrank 
+	%دانشگاه خواجه نصیرالدین طوسی 
+	\dotfill امضا\\
+	\vspace{5mm}
+	\fi
+	\ifx\@secondsupervisor\undefined%
+	\else 
+	استاد راهنما: 
+	\@secondsupervisor 
+	%					 \@secondsupervisorrank 
+	%دانشگاه خواجه نصیرالدین طوسی 
+	\dotfill امضا\\
+	\vspace{5mm}
+	\fi
+	\ifx\@firstadvisor\undefined%
+	\else 
+	استاد مشاور: 
+	\@firstadvisor 
+	%				   \@firstadvisorrank 
+	%دانشگاه خواجه نصیرالدین طوسی
+	\dotfill امضا\\
+	\vspace{5mm}
+	\fi
+	\ifx\@secondadvisor\undefined%
+	\else 
+	استاد مشاور: 
+	\@secondadvisor 
+	%				  \@secondadvisorrank 
+	%دانشگاه خواجه نصیرالدین طوسی 
+	\dotfill امضا\\
+	\vspace{5mm}
+	\fi
 }
 
 % \def\frame{\newpage
-	% \thispagestyle{empty}
-	% \begin{framed}\thispagestyle{empty}}
-	% \def\endframe{\thispagestyle{empty}\end{framed}
-	% \thispagestyle{empty}
-	% \newpage
-	% }
+% \thispagestyle{empty}
+% \begin{framed}\thispagestyle{empty}}
+% \def\endframe{\thispagestyle{empty}\end{framed}
+% \thispagestyle{empty}
+% \newpage
+% }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % بخش تقدیم
 %% پایان‌نامه خود را تقدیم کنید! %%
@@ -570,36 +570,35 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		%% After logos
 		\centering
 		\vskip 1.5cm
-		{%\latintitlefont 
-			\Huge\latintitlefont\bfseries
-			\@latintitle}
-		%\baselineskip=.750cm \par
-		\vskip 15mm
 		{
 			\large
 			\if@bscthesis 
 			Bachelor of Science Thesis
 			in  \@latinsubject 
 			\else
-%			Doctoral Thesis Proposal
-				A Thesis submitted to the Graduate Studies Office
-			    \\In partial fulfillment of the requirements for
-			    \\The degree of 
-				\if@mscthesis
-				 Master of Science
-				\else
-				 Doctor of Philosophy
-				\fi
-				\\in  \@latinsubject{}
-				\ifx\@latinfield\undefined%
-				\relax
-				\else
-				 - \@latinfield{}
-				\fi 
+			%			Doctoral Thesis Proposal
+			Thesis Submitted in Partial Fulfillment of the
+			\\Requirements for the Degree of 
+			\if@mscthesis
+			Master of Science (M.Sc.)
+			\else
+			Doctor of Philosophy (PHD.)
+			\fi
+			\\in  \@latinsubject{}
+			\ifx\@latinfield\undefined%
+			\relax
+			\else
+			- \@latinfield{}
+			\fi 
 			\baselineskip=.750cm
 			\addtolength{\baselineskip}{-5mm}
 			\fi
-		}
+		}\par
+		\vskip 15mm
+		{%\latintitlefont 
+			\Huge\latintitlefont\bfseries
+			\@latintitle}
+		%\baselineskip=.750cm \par
 		\vskip 15mm
 		{\bfseries\latinby}\par
 		{\large %\supervisorfont

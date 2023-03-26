@@ -20,6 +20,7 @@ If you would like to contribute to the template, please feel free to submit a pu
 
 # License
 This template is licensed under the GNU General Public License v3.0, which means you are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the template, subject to the conditions of the license. See the LICENSE file for more information.
----
+
+
 # Acknowledgments
 Special thanks to the LaTeX community for creating the tools necessary to implement these guidelines.

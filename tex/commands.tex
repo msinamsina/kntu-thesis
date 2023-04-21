@@ -255,17 +255,22 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 % O=Odd, E=Even, L=Left, R=Right
 % در صورت oneside بودن، عنوان فصل، سمت چپ ظاهر می‌شود.
 \fancyhead{}
-\fancyhead[OL]{\small\leftmark}
-\fancyhead[ER]{\small\rightmark}
+\fancyhead[OR]{\small\leftmark}
+\fancyhead[ER]{\small\leftmark}
+\fancyhead[OL,EL]{\thepage}
+\fancyfoot{} % حذف محتوای پیش‌فرض پانویس
+%\fancyhead[ER]{\small\rightmark}
 %\fancyhead[OR]{\footnotesize}
 %\fancyhead[EL]{\footnotesize\rightmark}
 \renewcommand{\headrulewidth}{0.75pt}
 % شکل‌دهی شماره و عنوان فصل در سربرگ
 \renewcommand{\chaptermark}[1]{\markboth{\@chapapp~\thechapter:\ #1}{}}
 \makeatletter
-\renewcommand{\rightmark}[1]{\@title}
-\makeatother
+%\renewcommand{\rightmark}[1]{\@title}
+%\makeatother
 %}
+% شکل‌دهی سربرگ در صفحات اولیه هر فصل
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{empty}}{}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\def\MATtextbaseline{1.5}
 %\renewcommand{\baselinestretch}{\MATtextbaseline}

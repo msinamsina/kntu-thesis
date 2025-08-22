@@ -118,6 +118,12 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 \RequirePackage{zref-perpage}
 \zmakeperpage{footnote}
 
+%%% درج هزارگان برای اعداد
+%% Example: \num{52325} = 52,325
+\usepackage{siunitx}
+\sisetup{group-separator = {,}}
+
+
 %%% بسته ایجاد واژه‌نامه با xindy
 \usepackage[xindy,toc,acronym,nonumberlist=true]{glossaries}
 
